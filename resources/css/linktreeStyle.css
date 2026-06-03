@@ -1,0 +1,213 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 100px;
+    background-color: color-mix(in srgb, rgb(120 0 22) 88%, white 12%);
+    font-family: 'Link Sans Product', sans-serif;
+    color: white;
+}
+
+@font-face {
+    font-family: 'Link Sans Product';
+    src: url(https://assets.production.linktr.ee/fonts/LinkSansProduct.woff2) format('woff2');
+}
+
+.linkFont {
+    color: rgb(0, 0, 0);
+}
+
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px 50px;
+}
+
+.title-text {
+    font-weight: 700;
+}
+
+.desc {
+    font-weight: 700;
+}
+
+.container {
+    width: 520px;
+    text-align: center;
+    background: linear-gradient(#C41500, #710b00);
+    border-radius: 20px;
+}
+
+.logo-bawah {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.logonya {
+    max-width: 13%;
+    height: auto;
+}
+
+.MainSection {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.link-item {
+    margin-bottom: 15px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.link-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+}
+
+.link-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.link-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-text .title {
+    font-weight: bold;
+}
+
+.link-text .desc {
+    font-size: 10px;
+    opacity: 0.8;
+    font-weight: 400px;
+}
+
+.custom-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* teks di tengah */
+}
+
+.custom-link .link-icon {
+    position: absolute;
+    left: 15px;
+    /* logo di pinggir kiri */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.custom-link span {
+    text-align: center;
+    width: 100%;
+    /* span full width agar center benar */
+}
+
+.shadow {
+    box-shadow: 5px 50px #888888;
+}
+
+.footer {
+    font-size: xx-small;
+    color: white;
+}
+
+.before-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo-atas {
+    height: 18px;
+    width: 18px;
+}
+
+.sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 24px;
+}
+
+.sosmed a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sosmed a:hover {
+    transform: scale(1.1);
+}
+
+.button-atas {
+    border-radius: 50px;
+    background-color: #cbcbcbbf;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn {
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.btn-bottom {
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+}
