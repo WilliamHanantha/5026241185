@@ -982,6 +982,7 @@
                                     </div>
 
                                     <div class="pt-3 sm:pt-5 lg:pt-0">
+                                        {{-- Nama --}}
                                         <h2 class="text-xl font-semibold text-black dark:text-white">William Anderson
                                             Hanantha</h2>
 
