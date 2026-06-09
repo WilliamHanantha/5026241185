@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\CryptoDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -79,3 +80,12 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+
+//route CRUD untuk crypto
+Route::get('/crypto', [CryptoDBController::class, 'indexcrypto']);
+Route::get('/crypto/cari', [CryptoDBController::class, 'cari']);
+Route::get('/crypto/tambah', [CryptoDBController::class, 'tambah']);
+Route::post('/crypto/store', [CryptoDBController::class, 'store']);
+Route::get('/crypto/edit/{kode}', [CryptoDBController::class, 'edit']);
+Route::post('/crypto/update', [CryptoDBController::class, 'update']);
+Route::get('/crypto/hapus/{kode}', [CryptoDBController::class, 'hapus']);

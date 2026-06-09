@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>5026241185 William Anderson Hanantha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -9,11 +10,10 @@
 
 <body>
     <div class="container mt-3">
-        <h2>5026241185</h2>
         <div class="mt-4 p-5 bg-primary text-white rounded">
             @yield('judul')
             <h1>5026241185 William Anderson Hanantha</h1>
-            <p>Data Pegawai</p>
+            <p>Dashboard</p>
         </div>
         <br>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -23,7 +23,7 @@
                         <a class="nav-link" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nama Tabel PR</a>
+                        <a class="nav-link" href="/crypto">Crypto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Siswa</a>
