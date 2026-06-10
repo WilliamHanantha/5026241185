@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\CryptoDBController;
+use App\Http\Controllers\BelanjaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -89,3 +90,10 @@ Route::post('/crypto/store', [CryptoDBController::class, 'store']);
 Route::get('/crypto/edit/{kode}', [CryptoDBController::class, 'edit']);
 Route::post('/crypto/update', [CryptoDBController::class, 'update']);
 Route::get('/crypto/hapus/{kode}', [CryptoDBController::class, 'hapus']);
+
+//route CRUD untuk belanja
+Route::get('/belanja', [BelanjaController::class, 'indexbelanja']);
+Route::get('/belanja/tambah', [BelanjaController::class, 'tambah']);
+Route::post('/belanja/store', [BelanjaController::class, 'store']);
+Route::get('/belanja/hapus/{kode}', [BelanjaController::class, 'hapus']);
+Route::get('/belanja/cari', [BelanjaController::class, 'cari']);
