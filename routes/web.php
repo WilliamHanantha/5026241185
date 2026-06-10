@@ -96,4 +96,3 @@ Route::get('/belanja', [BelanjaController::class, 'indexbelanja']);
 Route::get('/belanja/tambah', [BelanjaController::class, 'tambah']);
 Route::post('/belanja/store', [BelanjaController::class, 'store']);
 Route::get('/belanja/hapus/{kode}', [BelanjaController::class, 'hapus']);
-Route::get('/belanja/cari', [BelanjaController::class, 'cari']);

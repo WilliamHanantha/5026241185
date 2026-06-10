@@ -49,18 +49,4 @@ class BelanjaController extends Controller
         // alihkan halaman ke halaman belanja
         return redirect('/belanja');
     }
-
-    public function cari(Request $request)
-    {
-        // menangkap data pencarian
-        $cari = $request->cari;
-
-        // mengambil data dari table belanja sesuai pencarian merk
-        $keranjangbelanja = DB::table('keranjangbelanja')
-            ->where('kodebarang', 'like', "%" . $cari . "%")
-            ->paginate();
-
-        // mengirim data belanja ke view index
-        return view('belanja.index', ['keranjangbelanja' => $keranjangbelanja]);
-    }
 }

@@ -5,14 +5,6 @@
         <br><a href="/belanja/tambah" class="btn btn-primary">Beli</a>
     </p>
     <br />
-    <br />
-
-    <p>Cari Data belanja :</p>
-    <form action="/belanja/cari" method="GET">
-        <input type="text" name="cari" placeholder="Cari barang belanja .." class="form-control">
-        <input type="submit" value="CARI" class="btn btn-success">
-    </form>
-    <br />
     <table class="table table-hover table-striped mt-10">
         <tr>
             <th>Kode Pembelian</th>
