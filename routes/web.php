@@ -2,12 +2,13 @@
 
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CryptoDBController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FlashdiskController;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -83,14 +84,14 @@ Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 
-//route CRUD untuk crypto
-Route::get('/crypto', [CryptoDBController::class, 'indexcrypto']);
-Route::get('/crypto/cari', [CryptoDBController::class, 'cari']);
-Route::get('/crypto/tambah', [CryptoDBController::class, 'tambah']);
-Route::post('/crypto/store', [CryptoDBController::class, 'store']);
-Route::get('/crypto/edit/{kode}', [CryptoDBController::class, 'edit']);
-Route::post('/crypto/update', [CryptoDBController::class, 'update']);
-Route::get('/crypto/hapus/{kode}', [CryptoDBController::class, 'hapus']);
+//route CRUD untuk flashdisk
+Route::get('/flashdisk', [FlashdiskController::class, 'indexflashdisk']);
+Route::get('/flashdisk/cari', [FlashdiskController::class, 'cari']);
+Route::get('/flashdisk/tambah', [FlashdiskController::class, 'tambah']);
+Route::post('/flashdisk/store', [FlashdiskController::class, 'store']);
+Route::get('/flashdisk/edit/{kode}', [FlashdiskController::class, 'edit']);
+Route::post('/flashdisk/update', [FlashdiskController::class, 'update']);
+Route::get('/flashdisk/hapus/{kode}', [FlashdiskController::class, 'hapus']);
 
 //route CRUD untuk belanja
 Route::get('/belanja', [BelanjaController::class, 'indexbelanja']);
@@ -104,9 +105,9 @@ Route::get('/nilai/tambah', [NilaiController::class, 'tambah']);
 Route::post('/nilai/store', [NilaiController::class, 'store']);
 
 //route CRUD untuk siswa
-Route::get('/siswa', [App\Http\Controllers\SiswaController::class, 'index'])->name('siswa.index');
-Route::get('/siswa/create', [App\Http\Controllers\SiswaController::class, 'create'])->name('siswa.create');
-Route::post('/siswa/store', [App\Http\Controllers\SiswaController::class, 'store'])->name('siswa.store');
-Route::get('/siswa/edit/{nrp}', [App\Http\Controllers\SiswaController::class, 'edit'])->name('siswa.edit');
-Route::post('/siswa/update/{nrp}', [App\Http\Controllers\SiswaController::class, 'update'])->name('siswa.update');
-Route::get('/siswa/destroy/{nrp}', [App\Http\Controllers\SiswaController::class, 'destroy'])->name('siswa.destroy');
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa/store', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/edit/{nrp}', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::post('/siswa/update/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::get('/siswa/destroy/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');

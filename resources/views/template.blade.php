@@ -23,7 +23,7 @@
                         <a class="nav-link" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/crypto">Crypto</a>
+                        <a class="nav-link" href="/flashdisk">Flashdisk</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/siswa">Siswa</a>
