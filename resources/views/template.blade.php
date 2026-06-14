@@ -26,7 +26,7 @@
                         <a class="nav-link" href="/crypto">Crypto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Siswa</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/belanja">Belanja</a>

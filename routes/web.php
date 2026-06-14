@@ -102,3 +102,11 @@ Route::get('/belanja/hapus/{kode}', [BelanjaController::class, 'hapus']);
 Route::get('/nilai', [NilaiController::class, 'indexnilai']);
 Route::get('/nilai/tambah', [NilaiController::class, 'tambah']);
 Route::post('/nilai/store', [NilaiController::class, 'store']);
+
+//route CRUD untuk siswa
+Route::get('/siswa', [App\Http\Controllers\SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [App\Http\Controllers\SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa/store', [App\Http\Controllers\SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/edit/{nrp}', [App\Http\Controllers\SiswaController::class, 'edit'])->name('siswa.edit');
+Route::post('/siswa/update/{nrp}', [App\Http\Controllers\SiswaController::class, 'update'])->name('siswa.update');
+Route::get('/siswa/destroy/{nrp}', [App\Http\Controllers\SiswaController::class, 'destroy'])->name('siswa.destroy');
