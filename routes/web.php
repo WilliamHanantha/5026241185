@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DosenController;
-use App\Http\Controllers\PegawaiController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\PegawaiDBController;
-use App\Http\Controllers\CryptoDBController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CryptoDBController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PegawaiDBController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -64,7 +65,7 @@ Route::get('ituresponsive', function () {
     return view('responsive');
 });
 
-Route::get('itutemplate', function () {
+Route::get('template', function () {
     return view('template');
 });
 
@@ -96,3 +97,8 @@ Route::get('/belanja', [BelanjaController::class, 'indexbelanja']);
 Route::get('/belanja/tambah', [BelanjaController::class, 'tambah']);
 Route::post('/belanja/store', [BelanjaController::class, 'store']);
 Route::get('/belanja/hapus/{kode}', [BelanjaController::class, 'hapus']);
+
+//route CRUD untuk nilai
+Route::get('/nilai', [NilaiController::class, 'indexnilai']);
+Route::get('/nilai/tambah', [NilaiController::class, 'tambah']);
+Route::post('/nilai/store', [NilaiController::class, 'store']);
