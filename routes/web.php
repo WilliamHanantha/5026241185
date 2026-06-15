@@ -9,6 +9,7 @@ use App\Http\Controllers\PegawaiDBController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlashdiskController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\NilaiPesertaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -66,10 +67,6 @@ Route::get('ituresponsive', function () {
     return view('responsive');
 });
 
-Route::get('template', function () {
-    return view('template');
-});
-
 Route::get('menu', function () {
     return view('all-menu');
 });
@@ -111,3 +108,8 @@ Route::post('/siswa/store', [SiswaController::class, 'store'])->name('siswa.stor
 Route::get('/siswa/edit/{nrp}', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/update/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/destroy/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//route CRUD untuk nilai peserta
+Route::get('/eas', [NilaiPesertaController::class, 'indexnilai']);
+Route::get('/eas/tambah', [NilaiPesertaController::class, 'tambah']);
+Route::post('/eas/store', [NilaiPesertaController::class, 'store']);

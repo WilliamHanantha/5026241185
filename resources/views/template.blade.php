@@ -11,9 +11,16 @@
 <body>
     <div class="container mt-3">
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            @yield('judul')
-            <h1>5026241185 William Anderson Hanantha</h1>
-            <p>Dashboard</p>
+            @if (View::hasSection('judul_halaman_nilai'))
+                <h1>@yield('judul_halaman_nilai')</h1>
+            @elseif (View::hasSection('judul'))
+                <p>@yield('judul')</p>
+                <h1>5026241185 William Anderson Hanantha</h1>
+                <p>dashboard</p>
+            @else
+                <h1>5026241185 William Anderson Hanantha</h1>
+                <p>dashboard</p>
+            @endif
         </div>
         <br>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -35,7 +42,7 @@
                         <a class="nav-link" href="/nilai">Nilai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/eas">EAS</a>
                     </li>
                 </ul>
             </div>
