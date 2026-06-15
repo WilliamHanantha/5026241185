@@ -1,5 +1,5 @@
 @extends('template')
-@section('judul_halaman', 'Tambah nilai')
+@section('judul_halaman_nilai', 'Kode Soal nilai_peserta')
 @section('konten')
     <a href="/nilai" class="btn btn-secondary mb-4">Kembali</a>
 
